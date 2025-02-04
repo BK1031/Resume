@@ -52,7 +52,7 @@
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.73\textwidth}
-        AWS, Azure, Docker, Firebase, GCP, Git, Kafka, Kubernetes, PostgreSQL, RabbitMQ, SingleStore, Snowflake
+        AWS, Azure, Docker, Firebase, GCP, Git, Kafka, Kubernetes, Pandas, PostgreSQL, PyTorch, RabbitMQ, SingleStore, Snowflake
     \end{minipage}
     
 \end{minipage}
@@ -69,7 +69,7 @@
 		{September 2021 – June 2025}
 		{B.S. Computer Engineering
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Relevant Coursework: Circuits and Systems, Computer Architecture, Computer Vision, Data Structures \& Algorithms, Distributed Systems, Embedded Systems, Machine Learning, Operating Systems
+            \item Relevant Coursework: Circuits and Systems, Computer Architecture, Computer Vision, Data Structures \& Algorithms, Deep Learning, Distributed Systems, Embedded Systems, Machine Learning, Operating Systems
         \end{itemize}}
 \end{entrylist}
 \vspace{-10pt}
@@ -168,6 +168,20 @@
             \item The treasurer can view a summary of all purchase requests and approve them from a centralized dashboard
             \item Time-bound budgets for each subteam can be set by the treasurer, enabling better financial management of the team as well as more transparency into spending over time for all members
             \item React + Typescript frontend, Go + SingleStore backend
+        \end{itemize}}
+    \entry
+		{Technology}
+		{Epic Shelter}
+		{github.com/gaucho-racing/EpicShelter}
+		{\vspace{-8pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
+            \item Created Epic Shelter, a high-performance, distributed data backup/migration system
+            \item Supports PostgreSQL and MySQL wire compliant databases, as well as SingleStore and Snowflake
+            \item Data is backed up from a source database table as a batch of parquet files, backed up to S3, then ingested into a target database table
+            \item Orchestrator service allows distributing data movement across multiple worker nodes, and monitoring the status of the backup/migration
+            \item cuDF is used to acclerate reading/writing parquet files on GPUs
+            \item Parquet files from S3 are directly ingested into the target database when supported (SingleStore, Snowflake)
+            \item React + Typescript frontend, Go orchestrator, Python backend (cuDF + Pandas)
         \end{itemize}}
     \entry
 		{Technology}
