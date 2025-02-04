@@ -1,5 +1,7 @@
 # BK1031 Resume Bank
 
+[![Build and Deploy](https://github.com/BK1031/Resume/actions/workflows/deploy.yml/badge.svg)](https://github.com/BK1031/Resume/actions/workflows/deploy.yml)
+
 This is a simple repository that automates building and deploying resumes, allowing them to be easily acessible from anywhere. The goal was to be able to have a single place where I would always have up-to-date resumes. Any changes can be made by commiting to this repository will automatically be propogated wherever the resume link is used.
 
 For example, my main resume would always be at https://resume.bk1031.dev/bharat_kathi_main.pdf.
