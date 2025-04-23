@@ -108,11 +108,11 @@
 		{September 2021 – Present}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Spearheaded the creation of the Data subteam, and the development of Mapache, a robust data aquisition and analytics system allowing real-time concurrent data analysis on multiple vehicles
-            \item Data from over 200 sensors are sent over CAN (Controller Area Network) to a Jetson Orin Nano, where edge ML models perform error/anomaly detection in real-time
-            \item These signals are all sent over MQTT to an ingest service deployed on AWS, where data is deserialized and stored in a SingleStore database
-            \item Queries are performed on SingleStore to analyze driver behavior, vehicle performance, and other metrics relevant to the team, helping find areas of improvement for the car's design
-            \item A dashboard created with React and Typescript allows the team to view data in real-time, as well as analyze performance across different vehicles, sessions, and laps
+            \item Led development of Mapache, a real-time telemetry system enabling data-driven engineering through edge-deployed machine learning and cloud analytics for our team's Formula-style electric racecar
+            \item Deployed lightweight ML models on Jetson Orin Nano for real-time thermal prediction and anomaly detection on 200+ sensor signals streamed over CAN
+            \item Designed a fault-tolerant system to cache telemetry locally, then batch-convert and upload to the cloud as Parquet files via a GPU-accelerated cuDF pipeline
+            \item Built cloud infrastructure for data ingestion, time-series analysis, and long-term storage using MQTT, SingleStore, and AWS
+            \item Developed a React + TypeScript dashboard and integrated a natural language interface for querying ML-derived insights and performance trends
         \end{itemize}}
 	\entry
 		{}
