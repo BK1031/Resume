@@ -79,6 +79,21 @@
 %----------------------------------------------------------------------------------------
 \cvsect{Experience}
 \begin{entrylist}
+    \entry
+        {}
+        {Gaucho Racing (UCSB Formula SAE) • Data Lead}
+        {September 2021 – Present}
+        {\vspace{-8pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
+            \item Founded and led the Data subteam, building Mapache: an intelligent, real-time telemetry and analytics system for our team's Formula-style electric racecar
+            \item Designed an embedded edge stack with Jetson Orin Nano to decode 200+ sensor signals over CAN and execute real-time ML models for thermal prediction and anomaly detection
+            \item Created a robust telemetry pipeline that caches data onboard in the event of connectivity loss, and uploads it post-run using GPU-accelerated Parquet conversion and cuDF, ensuring zero data loss
+            \item Developed cloud infrastructure using MQTT, AWS, and SingleStore to ingest, store, and analyze high-frequency telemetry for performance diagnostics and tuning
+            \item Built a React + TypeScript dashboard with real-time signal visualizations, trip/lap segmentation, and historical comparisons across drivers and configurations
+            \item Integrated a natural language interface powered by LLMs, enabling engineers to query telemetry insights conversationally (e.g., “Compare battery temperature rise across laps”)
+            \item Collaborated closely with vehicle dynamics and powertrain teams to validate sensor data and translate telemetry insights into mechanical design improvements
+            \item Implemented continuous monitoring of system health (Jetson resource usage, connectivity, thermal load), with alerts routed back to the driver via CAN during operation
+        \end{itemize}}
 	\entry
         {}
 		{SingleStore • Software Engineering Intern}
@@ -101,21 +116,6 @@
             \item Added new services to the Admin Gateway (the backend powering Admin UI) using Python and FastAPI, and deployed on AWS Fargate
             \item Created a Service Registry Browser to visualize and provide easy access to information on the hundreds of services deployed on AWS, dependencies between services and on datastores were automatically generated nightly from AWS CDK config files
             \item Created an On-call Log to track on-call events for each engineer and each team, tag and search through previous actions taken, and send slack workspaces notifications to relevant engineers/teams when an on-call event is triggered
-        \end{itemize}}
-    \entry
-        {}
-        {Gaucho Racing (UCSB Formula SAE) • Data Lead}
-        {September 2021 – Present}
-        {\vspace{-8pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Founded and led the Data subteam, building Mapache: an intelligent, real-time telemetry and analytics system for our team's Formula-style electric racecar
-            \item Designed an embedded edge stack with Jetson Orin Nano to decode 200+ sensor signals over CAN and execute real-time ML models for thermal prediction and anomaly detection
-            \item Created a robust telemetry pipeline that caches data onboard in the event of connectivity loss, and uploads it post-run using GPU-accelerated Parquet conversion and cuDF, ensuring zero data loss
-            \item Developed cloud infrastructure using MQTT, AWS, and SingleStore to ingest, store, and analyze high-frequency telemetry for performance diagnostics and tuning
-            \item Built a React + TypeScript dashboard with real-time signal visualizations, trip/lap segmentation, and historical comparisons across drivers and configurations
-            \item Integrated a natural language interface powered by LLMs, enabling engineers to query telemetry insights conversationally (e.g., “Compare battery temperature rise across laps”)
-            \item Collaborated closely with vehicle dynamics and powertrain teams to validate sensor data and translate telemetry insights into mechanical design improvements
-            \item Implemented continuous monitoring of system health (Jetson resource usage, connectivity, thermal load), with alerts routed back to the driver via CAN during operation
         \end{itemize}}
 	\entry
 		{}
