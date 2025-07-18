@@ -23,12 +23,12 @@
 	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Bharat Kathi}}}} % First name
 	
 	\vspace{6pt}
-    \icon{Envelope}{11}{\href{mailto:bkathi@ucsb.edu}{bkathi@ucsb.edu}}
-    \hspace{22pt}
-    \icon{Phone}{11}{510 945 9684}
+    \icon{Envelope}{11}{\href{mailto:bharat1031@gmail.com}{bharat1031@gmail.com}}
+    \hspace{8pt}
+    \icon{Phone}{11}{+1 (510) 945-9684}
 
     \icon{Github}{11}{\href{https://github.com/bk1031}{github.com/bk1031}}
-    \hspace{12pt}
+    \hspace{24pt}
     \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/bk1031/}{/in/bk1031}}
     
 \end{minipage}
@@ -43,7 +43,7 @@
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.73\textwidth}
-        C++, Dart, Golang, Java, NodeJS, Python, Swift
+       Go, Python, C++, Dart, Swift, Java, Typescript, SQL
     \end{minipage}
     \vspace{5 pt}
     
@@ -81,15 +81,16 @@
 \begin{entrylist}
 	\entry
         {}
-		{SingleStore • Software Engineering Intern}
-		{June 2024 – September 2024}
-		{\vspace{-8pt}
+        {SingleStore • Software Engineering Intern}
+        {June 2024 – September 2024}
+        {\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Worked on SingleStore's SPCS Native App (bringing the SingleStore HTAP engine into Snowflake's Snowpark Container Services)
-            \item Simplified the setup flow in by providing preset cluster configuration options to the user in the SPCS Streamlit application
-            \item Created a demo showcasing the SPCS integration to enable real-time data analytics on Snowflake's data warehouse
-            \item Mocked a ridesharing application that produced real-time rider/driver updates to a Kafka broker, ingesting the data into Snowflake + SingleStore in SPCS, and displayed analytics in a React dashboard, showcasing latency and query performance improvements
-            \item Presented the demo to prospective customers as well as at SingleStore's annual conference (SingleStore NOW)
+            \item SingleStore is a high-performance, distributed SQL database that combines transactional and analytical workloads (HTAP) in one engine
+            \item Helped launch SingleStore's integration into Snowflake's ecosystem (Snowpark Container Services), enabling customers to run real-time analytics directly within their data warehouse
+            \item Streamlined the user experience by simplifying cluster setup, making it easier for new users to quickly get started with SingleStore in Snowpark
+            \item Built and showcased a demo simulating a ridesharing app, generating live driver/rider data and visualizing insights on a real-time dashboard
+            \item Demonstrated 50x latency and query performance improvements by comparing results between Snowflake and SingleStore within the same environment
+            \item Presented the demo to prospective customers and at SingleStore’s annual conference, helping drive product interest and adoption
         \end{itemize}}
     \entry
         {}
@@ -134,7 +135,7 @@
 \cvsect{Projects}
 \begin{entrylist}
     \entry
-		{Technology}
+		{}
 		{StorkeCentral • 1,500+ Users}
 		{storkecentral.app}
         {\vspace{-8pt}
@@ -145,7 +146,7 @@
             \item Flutter frontend, Go + PostgreSQL + Kubernetes backend
         \end{itemize}}
 	\entry
-		{Technology}
+		{}
 		{Sentinel}
 		{github.com/gaucho-racing/Sentinel}
 		{\vspace{-8pt}
@@ -157,20 +158,7 @@
             \item React + Typescript frontend, Go + SingleStore backend
         \end{itemize}}
     \entry
-		{Technology}
-		{Jiffy}
-		{github.com/gaucho-racing/Jiffy}
-		{\vspace{-8pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created Jiffy, a purchase request system for Gaucho Racing (UCSB's Formula SAE team)
-            \item Members can submit purchase requests for parts needed the car, which go through a 2 step approval process with the subteam's lead and the treasurer
-            \item Order statuses are automatically updated from vendors in the system, and notifications are sent to members as requests are processed including shipping updates
-            \item The treasurer can view a summary of all purchase requests and approve them from a centralized dashboard
-            \item Time-bound budgets for each subteam can be set by the treasurer, enabling better financial management of the team as well as more transparency into spending over time for all members
-            \item React + Typescript frontend, Go + SingleStore backend
-        \end{itemize}}
-    \entry
-		{Technology}
+		{}
 		{Epic Shelter}
 		{github.com/gaucho-racing/EpicShelter}
 		{\vspace{-8pt}
@@ -183,25 +171,23 @@
             \item Parquet files from S3 are directly ingested into the target database when supported (SingleStore, Snowflake)
             \item React + Typescript frontend, Go orchestrator, Python backend (cuDF + Pandas)
         \end{itemize}}
+\end{entrylist}
+\vspace{-10pt}
+
+%----------------------------------------------------------------------------------------
+%	Publications
+%----------------------------------------------------------------------------------------
+\cvsect{Publications}
+\begin{entrylist}
     \entry
-		{Technology}
-		{myDECA • 1st Place State, 3rd Place International DECA}
-		{github.com/bk1031/myDECA-web}
-        {\vspace{-8pt}
+		{}
+		{Real-Time Environment Monitoring for Sustainable Agricultural Practices}
+		{arXiv:2506.13003}
+		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created a platform used by 7 schools across california, that improves communications among DECA chapters through built-in announcements, group chats, push notifications, as well as convenient access to resources including conference information, practice materials, and meeting details
-            \item Flutter frontend, NodeJS + Cloud Functions + Firebase backend
-        \end{itemize}}
-    \entry
-		{Technology}
-		{CF Tracker • 1st Place, HealthHack II}
-		{github.com/bk1031/CF-Tracker}
-        {\vspace{-8pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created a mobile app that CF patients can use to track daily treatments including nebulizer usage, meal and enzyme intake, and sends push notifications to remind users if they miss a dose
-            \item Also collects stool and other data (inputted by the user) to a database and runs a model (Tensorflow/Keras Dense Layer Neural Network) to determine if a person should take more or less enzymes
-            \item Flutter frontend, Python + PostgreSQL + Tensorflow backend
+            \item A survey of deep learning techniques for time series modeling, including convolutional neural networks, recurrent neural networks, and transformers
         \end{itemize}}
 \end{entrylist}
+\vspace{-10pt}
 
 \end{document}
