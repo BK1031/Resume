@@ -112,9 +112,10 @@
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
             \item Led development of Mapache, a real-time telemetry system enabling data-driven engineering through edge-deployed machine learning and cloud analytics for our team's Formula-style electric racecar
             \item Deployed lightweight ML models on Jetson Orin Nano for real-time thermal prediction and anomaly detection on 200+ sensor signals streamed over CAN
-            \item Designed a fault-tolerant system to cache telemetry locally, then batch-convert and upload to the cloud as Parquet files via a GPU-accelerated cuDF pipeline
+            \item Designed a fault-tolerant system to cache telemetry locally when connectivity is lost, then batch-convert and upload to the cloud as Parquet files via a GPU-accelerated cuDF pipeline
             \item Built cloud infrastructure for data ingestion, time-series analysis, and long-term storage using MQTT, SingleStore, and AWS
             \item Developed a React + TypeScript dashboard and integrated a natural language interface for querying ML-derived insights and performance trends
+            \item This system was the first of its kind in the history of Formula SAE, and has collected over 20 GB (over 1B datapoints) of vehicle data
         \end{itemize}}
     \entry
         {}
@@ -146,17 +147,20 @@
             \item Users can add their friends, share class schedule information, and receive notifications when friends are in class
             \item Flutter frontend, Go + PostgreSQL + Kubernetes backend
         \end{itemize}}
-	\entry
+    \entry
 		{}
-		{Sentinel}
-		{github.com/gaucho-racing/Sentinel}
+		{SproutSense}
+		{github.com/BK1031/SproutSense}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created Sentinel, a central authentication service for Gaucho Racing (UCSB's Formula SAE team)
-            \item Keeps track of an active member directory, interfacing with our Discord server to sync subteams and roles
-            \item Implemented OAuth 2.0 and OpenID Connect protocols to allow internal tools to authenticate members, as well as serve as an identity provider for external tools
-            \item Automated onboarding/offboarding processes for the team, including managing permissions for Google Drive, GitHub, and even SOLIDWORKS CAD Licenses.
-            \item React + Typescript frontend, Go + SingleStore backend
+            \item Designed and built SproutSense as part of my senior capstone project: a distributed LoRa-based telemetry system for real-time environmental monitoring across large agricultural fields
+            \item Sensor Modules trasmit readings to nearby Base Stations, forming a star topology minimizing node complexity/power and simplifying large-field scaling
+            \item Developed custom PCBs for both Sensor Modules and Base Stations, supporting over 100 modules per base station, communicating over 915 MHz LoRa using Listen-Before-Talk (LBT) to reduce collisions
+            \item STM32-based Sensor Modules measure temperature, humidity, soil moisture, soil nutrition, and light levels at configurable intervals (30 min to 24 hrs)
+            \item ESP32-based Base Stations relay LoRa messages to an MQTT broker, which are then ignested by a Python Flask application where messages are parsed, scaled, and stored in a PostgreSQL database
+            \item An exponential weighted moving average (EWMA) is used at each node to estimate channel activity and probabilistically delay transmissions to avoid collisions
+            \item React + Typescript frontend enables farmers to visualize historical trends and detect anomalies across the field
+            \item Designed for ultra-low power operation and long-term deployment in remote, offline environments, powered by solar with a battery backup lasting over a week
         \end{itemize}}
     \entry
 		{}
@@ -171,6 +175,18 @@
             \item cuDF is used to acclerate reading/writing parquet files on GPUs
             \item Parquet files from S3 are directly ingested into the target database when supported (SingleStore, Snowflake)
             \item React + Typescript frontend, Go orchestrator, Python backend (cuDF + Pandas)
+        \end{itemize}}
+	\entry
+		{}
+		{Sentinel}
+		{github.com/gaucho-racing/Sentinel}
+		{\vspace{-8pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
+            \item Created Sentinel, a central authentication service for Gaucho Racing (UCSB's Formula SAE team)
+            \item Keeps track of an active member directory, interfacing with our Discord server to sync subteams and roles
+            \item Implemented OAuth 2.0 and OpenID Connect protocols to allow internal tools to authenticate members, as well as serve as an identity provider for external tools
+            \item Automated onboarding/offboarding processes for the team, including managing permissions for Google Drive, GitHub, and even SOLIDWORKS CAD Licenses.
+            \item React + Typescript frontend, Go + SingleStore backend
         \end{itemize}}
 \end{entrylist}
 \vspace{-10pt}
