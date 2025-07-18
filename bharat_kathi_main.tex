@@ -52,7 +52,8 @@
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.73\textwidth}
-        AWS, Azure, Docker, Firebase, GCP, Git, Kafka, Kubernetes, Pandas, PostgreSQL, PyTorch, RabbitMQ, SingleStore, Snowflake
+        % AWS, Azure, Docker, Firebase, GCP, Git, Kafka, Kubernetes, Pandas, PostgreSQL, PyTorch, RabbitMQ, SingleStore, Snowflake
+        AWS, GCP, Kubernetes, Terraform, Docker, PyTorch, Kafka, PostgreSQL, Snowflake
     \end{minipage}
     
 \end{minipage}
@@ -79,29 +80,29 @@
 %----------------------------------------------------------------------------------------
 \cvsect{Experience}
 \begin{entrylist}
-	\entry
+    \entry
         {}
         {SingleStore • Software Engineering Intern}
         {June 2024 – September 2024}
         {\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item SingleStore is a high-performance, distributed SQL database that combines transactional and analytical workloads (HTAP) in one engine
-            \item Helped launch SingleStore's integration into Snowflake's ecosystem (Snowpark Container Services), enabling customers to run real-time analytics directly within their data warehouse
-            \item Streamlined the user experience by simplifying cluster setup, making it easier for new users to quickly get started with SingleStore in Snowpark
-            \item Built and showcased a demo simulating a ridesharing app, generating live driver/rider data and visualizing insights on a real-time dashboard
-            \item Demonstrated 50x latency and query performance improvements by comparing results between Snowflake and SingleStore within the same environment
-            \item Presented the demo to prospective customers and at SingleStore’s annual conference, helping drive product interest and adoption
+            \item SingleStore is a distributed, high-performance SQL database that unifies transactional and analytical workloads (HTAP) in a single engine
+            \item Contributed to SingleStore's integration into Snowflake via Snowpark Container Services, enabling real-time analytics inside Snowflake's data warehouse
+            \item Improved onboarding by adding preset cluster configuration options in the Python based UI (Streamlit), streamlining setup for new users
+            \item Built and presented a demo simulating a real-time ridesharing app, streaming live driver/rider data and visualizing insights in a React dashboard
+            \item Demonstrated up to 50x lower latency and faster queries compared to native Snowflake workloads, highlighting the performance benefits of SingleStore
+            \item Presented the demo to enterprise customers and at SingleStore NOW, supporting product launch and early adoption
         \end{itemize}}
     \entry
         {}
-		{Axiamatic (Greylock-backed startup) • Software Engineering Intern}
-		{June 2023 – September 2023}
-		{\vspace{-8pt}
+        {Axiamatic (Greylock-backed startup) • Software Engineering Intern}
+        {June 2023 – September 2023}
+        {\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Built out custom components using React and Typescript for Admin UI, an internal tool for engineers to manage and monitor the platform
-            \item Added new services to the Admin Gateway (the backend powering Admin UI) using Python and FastAPI, and deployed on AWS Fargate
-            \item Created a Service Registry Browser to visualize and provide easy access to information on the hundreds of services deployed on AWS, dependencies between services and on datastores were automatically generated nightly from AWS CDK config files
-            \item Created an On-call Log to track on-call events for each engineer and each team, tag and search through previous actions taken, and send slack workspaces notifications to relevant engineers/teams when an on-call event is triggered
+            \item Built internal tools with React and TypeScript for Admin UI, an internal tool for engineers to manage and monitor the platform
+            \item Developed new backend services in Python (FastAPI) for the Admin UI, and deployed them on AWS Fargate
+            \item Created a Service Registry Browser to visualize 100+ AWS-deployed microservices and their dependencies, significantly improving visibility across teams and accelerating onboarding for new engineers
+            \item Built an On-call Log system to track incidents, document responses, and notify responsible teams via Slack, reducing on-call resolution time and improving cross-team coordination during outages
         \end{itemize}}
     \entry
 		{}
@@ -115,16 +116,16 @@
             \item Built cloud infrastructure for data ingestion, time-series analysis, and long-term storage using MQTT, SingleStore, and AWS
             \item Developed a React + TypeScript dashboard and integrated a natural language interface for querying ML-derived insights and performance trends
         \end{itemize}}
-	\entry
-		{}
-		{Pacific Esports League • Software Engineering Intern}
-		{June 2022 – September 2022}
-		{\vspace{-8pt}
+    \entry
+        {}
+        {Pacific Esports League • Software Engineering Intern}
+        {June 2022 – September 2022}
+        {\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Worked on the the PEL Portal, a web app built with Flutter allowing players to create teams, register for tournaments, and track their stats in the league
-            \item Created a custom CMS for admins to manage tournaments, teams, and players
-            \item Implemented a matchmaking system which automatically seeds teams, notifies players of upcoming matches, and allows them to submit match results
-            \item Setup CI/CD pipelines using GitHub actions to automatically deploy backend Go microservices to Azure Container Apps
+            \item Built core features for the PEL Portal, a Flutter-based web app used by 1,000+ players to form teams, register for tournaments, and view real-time stats
+            \item Designed a custom CMS for league admins to manage tournaments, streamlining team and player management
+            \item Implemented a matchmaking system to auto-seed brackets, notify players, and collect results, reducing manual labor by more than 20 hours/week
+            \item Set up CI/CD pipelines with GitHub Actions to auto-deploy Go-based microservices to Azure Container Apps
         \end{itemize}}
 \end{entrylist}
 \vspace{-10pt}
@@ -181,11 +182,23 @@
 \begin{entrylist}
     \entry
 		{}
-		{Real-Time Environment Monitoring for Sustainable Agricultural Practices}
-		{arXiv:2506.13003}
+		{Mapache - An Intelligent, Real-Time Telemetry Platform for Formula SAE}
+		{}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item A survey of deep learning techniques for time series modeling, including convolutional neural networks, recurrent neural networks, and transformers
+            \item Bharat Kathi, Andrey Otvagin, Jacob Jurek, Austin Chan, Colin Bickel
+            \item Accepted to the 2025 International Telemetering Conference (ITC), to be published in their Vol. 60 Proceedings
+            \item https://github.com/Gaucho-Racing/Mapache/blob/main/itc25.pdf
+        \end{itemize}}
+    \entry
+		{}
+		{Real-Time Environment Monitoring for Sustainable Agricultural Practices}
+		{}
+		{\vspace{-8pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
+            \item Julia Chan, Max Cohn, Bharat Kathi, Pablo Sandoval Rivas, Kriteen Shrestha, Yogananda Isukapalli
+            \item Accepted to the 2025 International Telemetering Conference (ITC), to be published in their Vol. 60 Proceedings
+            \item https://github.com/BK1031/SproutSense/blob/main/itc25.pdf
         \end{itemize}}
 \end{entrylist}
 \vspace{-10pt}
