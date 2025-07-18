@@ -93,6 +93,7 @@
             \item Integrated a natural language interface powered by LLMs, enabling engineers to query telemetry insights conversationally (e.g., “Compare battery temperature rise across laps”)
             \item Collaborated closely with vehicle dynamics and powertrain teams to validate sensor data and translate telemetry insights into mechanical design improvements
             \item Implemented continuous monitoring of system health (Jetson resource usage, connectivity, thermal load), with alerts routed back to the driver via CAN during operation
+            \item This system was the first of its kind in the history of Formula SAE, and has collected over 20 GB (over 1B datapoints) of vehicle data
         \end{itemize}}
 	\entry
         {}
@@ -100,11 +101,12 @@
 		{June 2024 – September 2024}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Worked on SingleStore's SPCS Native App (bringing the SingleStore HTAP engine into Snowflake's Snowpark Container Services)
-            \item Simplified the setup flow in by providing preset cluster configuration options to the user in the SPCS Streamlit application
-            \item Created a demo showcasing the SPCS integration to enable real-time data analytics on Snowflake's data warehouse
-            \item Mocked a ridesharing application that produced real-time rider/driver updates to a Kafka broker, ingesting the data into Snowflake + SingleStore in SPCS, and displayed analytics in a React dashboard, showcasing latency and query performance improvements
-            \item Presented the demo to prospective customers as well as at SingleStore's annual conference (SingleStore NOW)
+            \item SingleStore is a distributed, high-performance SQL database that unifies transactional and analytical workloads (HTAP) in a single engine
+            \item Contributed to SingleStore's integration into Snowflake via Snowpark Container Services, enabling real-time analytics inside Snowflake's data warehouse
+            \item Improved onboarding by adding preset cluster configuration options in the Python based UI (Streamlit), streamlining setup for new users
+            \item Built and presented a demo simulating a real-time ridesharing app, streaming live driver/rider data and visualizing insights in a React dashboard
+            \item Demonstrated up to 50x lower latency and faster queries compared to native Snowflake workloads, highlighting the performance benefits of SingleStore
+            \item Presented the demo to enterprise customers and at SingleStore NOW, supporting product launch and early adoption
         \end{itemize}}
     \entry
         {}
@@ -112,10 +114,10 @@
 		{June 2023 – September 2023}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Built out custom components using React and Typescript for Admin UI, an internal tool for engineers to manage and monitor the platform
-            \item Added new services to the Admin Gateway (the backend powering Admin UI) using Python and FastAPI, and deployed on AWS Fargate
-            \item Created a Service Registry Browser to visualize and provide easy access to information on the hundreds of services deployed on AWS, dependencies between services and on datastores were automatically generated nightly from AWS CDK config files
-            \item Created an On-call Log to track on-call events for each engineer and each team, tag and search through previous actions taken, and send slack workspaces notifications to relevant engineers/teams when an on-call event is triggered
+            \item Built internal tools with React and TypeScript for Admin UI, an internal tool for engineers to manage and monitor the platform
+            \item Developed new backend services in Python (FastAPI) for the Admin UI, and deployed them on AWS Fargate
+            \item Created a Service Registry Browser to visualize 100+ AWS-deployed microservices and their dependencies, significantly improving visibility across teams and accelerating onboarding for new engineers
+            \item Built an On-call Log system to track incidents, document responses, and notify responsible teams via Slack, reducing on-call resolution time and improving cross-team coordination during outages
         \end{itemize}}
 	\entry
 		{}
@@ -123,10 +125,10 @@
 		{June 2022 – September 2022}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Worked on the the PEL Portal, a web app built with Flutter allowing players to create teams, register for tournaments, and track their stats in the league
-            \item Created a custom CMS for admins to manage tournaments, teams, and players
-            \item Implemented a matchmaking system which automatically seeds teams, notifies players of upcoming matches, and allows them to submit match results
-            \item Setup CI/CD pipelines using GitHub actions to automatically deploy backend Go microservices to Azure Container Apps
+            \item Built core features for the PEL Portal, a Flutter-based web app used by 1,000+ players to form teams, register for tournaments, and view real-time stats
+            \item Designed a custom CMS for league admins to manage tournaments, streamlining team and player management
+            \item Implemented a matchmaking system to auto-seed brackets, notify players, and collect results, reducing manual labor by more than 20 hours/week
+            \item Set up CI/CD pipelines with GitHub Actions to auto-deploy Go-based microservices to Azure Container Apps
         \end{itemize}}
 \end{entrylist}
 \vspace{-10pt}
@@ -137,30 +139,33 @@
 \cvsect{Projects}
 \begin{entrylist}
     \entry
-		{Technology}
+		{}
 		{StorkeCentral • 1,500+ Users}
 		{storkecentral.app}
         {\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
             \item Created a platform for UCSB students to access important campus information, and scaled to over 1,000 monthly active users
-            \item StorkeCentral provides easy access to dining hall menus, campus maps, bus schedules, and more
+            \item StorkeCentral provide easy access to dining hall menus, campus maps, bus schedules, and more
             \item Users can add their friends, share class schedule information, and receive notifications when friends are in class
             \item Flutter frontend, Go + PostgreSQL + Kubernetes backend
         \end{itemize}}
-	\entry
-		{Technology}
-		{Sentinel}
-		{github.com/gaucho-racing/Sentinel}
+    \entry
+		{}
+		{SproutSense}
+		{github.com/BK1031/SproutSense}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created Sentinel, a central authentication service for Gaucho Racing (UCSB's Formula SAE team)
-            \item Keeps track of an active member directory, interfacing with our Discord server to sync subteams and roles
-            \item Implemented OAuth 2.0 and OpenID Connect protocols to allow internal tools to authenticate members, as well as serve as an identity provider for external tools
-            \item Automated onboarding/offboarding processes for the team, including managing permissions for Google Drive, GitHub, and even SOLIDWORKS CAD Licenses.
-            \item React + Typescript frontend, Go + SingleStore backend
+            \item Designed and built SproutSense as part of my senior capstone project: a distributed LoRa-based telemetry system for real-time environmental monitoring across large agricultural fields
+            \item Sensor Modules trasmit readings to nearby Base Stations, forming a star topology minimizing node complexity/power and simplifying large-field scaling
+            \item Developed custom PCBs for both Sensor Modules and Base Stations, supporting over 100 modules per base station, communicating over 915 MHz LoRa using Listen-Before-Talk (LBT) to reduce collisions
+            \item STM32-based Sensor Modules measure temperature, humidity, soil moisture, soil nutrition, and light levels at configurable intervals (30 min to 24 hrs)
+            \item ESP32-based Base Stations relay LoRa messages to an MQTT broker, which are then ignested by a Python Flask application where messages are parsed, scaled, and stored in a PostgreSQL database
+            \item An exponential weighted moving average (EWMA) is used at each node to estimate channel activity and probabilistically delay transmissions to avoid collisions
+            \item React + Typescript frontend enables farmers to visualize historical trends and detect anomalies across the field
+            \item Designed for ultra-low power operation and long-term deployment in remote, offline environments, powered by solar with a battery backup lasting over a week
         \end{itemize}}
     \entry
-		{Technology}
+		{}
 		{Epic Shelter}
 		{github.com/gaucho-racing/EpicShelter}
 		{\vspace{-8pt}
@@ -173,38 +178,47 @@
             \item Parquet files from S3 are directly ingested into the target database when supported (SingleStore, Snowflake)
             \item React + Typescript frontend, Go orchestrator, Python backend (cuDF + Pandas)
         \end{itemize}}
-    \entry
-		{Technology}
-		{Jiffy}
-		{github.com/gaucho-racing/Jiffy}
+	\entry
+		{}
+		{Sentinel}
+		{github.com/gaucho-racing/Sentinel}
 		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created Jiffy, a purchase request system for Gaucho Racing (UCSB's Formula SAE team)
-            \item Members can submit purchase requests for parts needed the car, which go through a 2 step approval process with the subteam's lead and the treasurer
-            \item Order statuses are automatically updated from vendors in the system, and notifications are sent to members as requests are processed including shipping updates
-            \item The treasurer can view a summary of all purchase requests and approve them from a centralized dashboard
-            \item Time-bound budgets for each subteam can be set by the treasurer, enabling better financial management of the team as well as more transparency into spending over time for all members
+            \item Created Sentinel, a central authentication service for Gaucho Racing (UCSB's Formula SAE team)
+            \item Keeps track of an active member directory, interfacing with our Discord server to sync subteams and roles
+            \item Implemented OAuth 2.0 and OpenID Connect protocols to allow internal tools to authenticate members, as well as serve as an identity provider for external tools
+            \item Automated onboarding/offboarding processes for the team, including managing permissions for Google Drive, GitHub, and even SOLIDWORKS CAD Licenses.
             \item React + Typescript frontend, Go + SingleStore backend
         \end{itemize}}
+\end{entrylist}
+\vspace{-10pt}
+
+%----------------------------------------------------------------------------------------
+%	Publications
+%----------------------------------------------------------------------------------------
+\cvsect{Publications}
+\begin{entrylist}
     \entry
-		{Technology}
-		{myDECA • 1st Place State, 3rd Place International DECA}
-		{github.com/bk1031/myDECA-web}
-        {\vspace{-8pt}
+		{}
+		{Mapache - An Intelligent, Real-Time Telemetry Platform for Formula SAE}
+		{}
+		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created a platform used by 7 schools across california, that improves communications among DECA chapters through built-in announcements, group chats, push notifications, as well as convenient access to resources including conference information, practice materials, and meeting details
-            \item Flutter frontend, NodeJS + Cloud Functions + Firebase backend
+            \item Bharat Kathi, Andrey Otvagin, Jacob Jurek, Austin Chan, Colin Bickel
+            \item Accepted to the 2025 International Telemetering Conference (ITC), to be published in their Vol. 60 Proceedings
+            \item https://github.com/Gaucho-Racing/Mapache/blob/main/itc25.pdf
         \end{itemize}}
     \entry
-		{Technology}
-		{CF Tracker • 1st Place, HealthHack II}
-		{github.com/bk1031/CF-Tracker}
-        {\vspace{-8pt}
+		{}
+		{Real-Time Environment Monitoring for Sustainable Agricultural Practices}
+		{}
+		{\vspace{-8pt}
         \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=10pt]
-            \item Created a mobile app that CF patients can use to track daily treatments including nebulizer usage, meal and enzyme intake, and sends push notifications to remind users if they miss a dose
-            \item Also collects stool and other data (inputted by the user) to a database and runs a model (Tensorflow/Keras Dense Layer Neural Network) to determine if a person should take more or less enzymes
-            \item Flutter frontend, Python + PostgreSQL + Tensorflow backend
+            \item Julia Chan, Max Cohn, Bharat Kathi, Pablo Sandoval Rivas, Kriteen Shrestha, Yogananda Isukapalli
+            \item Accepted to the 2025 International Telemetering Conference (ITC), to be published in their Vol. 60 Proceedings
+            \item https://github.com/BK1031/SproutSense/blob/main/itc25.pdf
         \end{itemize}}
 \end{entrylist}
+\vspace{-10pt}
 
 \end{document}
